@@ -19,7 +19,7 @@ class Deck:
     return len(self.high_ranking_cards()) / len(self.cards)
 
   def remove_card(self):
-    self.cards.pop(1)
+    self.cards.pop(0)
 
   def add_card(self, card):
     self.cards.append(card)
