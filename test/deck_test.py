@@ -7,10 +7,10 @@ from lib.deck import Deck
 
 class TestCards(unittest.TestCase):
   def setUp(self):
-    self.card_one = Card("Hearts", "5", 5)
-    self.card_two = Card("Diamonds", "Jack",11)
-    self.card_three = Card("Spades", "7", 7)
-    self.card_four = Card("Spades", "Ace", 14)
+    self.card_one = Card("Heart", "5", 5)
+    self.card_two = Card("Diamond", "Jack",11)
+    self.card_three = Card("Spade", "7", 7)
+    self.card_four = Card("Spade", "Ace", 14)
     cards = [self.card_one, self.card_two, self.card_three, self.card_four]
     self.deck = Deck(cards)
 
@@ -34,7 +34,7 @@ class TestCards(unittest.TestCase):
     assert len(self.deck.cards) == 3
 
   def test_add_card(self):
-    new_card = Card("Hearts", "King", 13)
+    new_card = Card("Heart", "King", 13)
     self.deck.add_card(new_card)
     assert len(self.deck.cards) == 5
 
