@@ -7,28 +7,31 @@ from lib.deck import Deck
 
 class TestCards(unittest.TestCase):
   def setUp(self):
-    cards = []
-    self.card_one = cards.append(Card("Hearts", "5", 5))
-    self.card_two = cards.append(Card("Diamonds", "Jack",11))
-    self.card_three = cards.append(Card("Spades", "7", 7))
-    self.card_four = cards.append(Card("Spades", "Ace", 14))
-    self.new_deck = Deck(cards)
+    self.card_one = Card("Hearts", "5", 5)
+    self.card_two = Card("Diamonds", "Jack",11)
+    self.card_three = Card("Spades", "7", 7)
+    self.card_four = Card("Spades", "Ace", 14)
+    cards = [self.card_one, self.card_two, self.card_three, self.card_four]
+    self.deck = Deck(cards)
 
   def test_it_exists(self):
-    assert type(self.new_deck) == Deck
-    assert type(self.new_deck.cards[0]) == Card
+    assert type(self.deck) == Deck
+    assert type(self.deck.cards[0]) == Card
 
   def test_rank_of_card_at(self):
-    assert self.new_deck.rank_of_card_at(0) == '5'
-    assert self.new_deck.rank_of_card_at(1) == 'Jack'
-    assert self.new_deck.rank_of_card_at(2) == '7'
+    assert self.deck.rank_of_card_at(0) == '5'
+    assert self.deck.rank_of_card_at(1) == 'Jack'
+    assert self.deck.rank_of_card_at(2) == '7'
 
   def test_high_ranking_cards(self):
-    self.new_deck.high_ranking_cards == [self.card_two, self.card_four]
+    assert self.deck.high_ranking_cards() == [self.card_two, self.card_four]
   
   def test_percent_high_ranking(self):
-    self.new_deck.percent_high_ranking == .5
+    assert self.deck.percent_high_ranking() == 0.5
 
+  def test_remove_card(self):
+    self.deck.remove_card()
+    assert len(self.deck.cards) == 3
 
 if __name__ == '__main__':
     unittest.main()
