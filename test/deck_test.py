@@ -33,5 +33,10 @@ class TestCards(unittest.TestCase):
     self.deck.remove_card()
     assert len(self.deck.cards) == 3
 
+  def test_add_card(self):
+    new_card = Card("Hearts", "King", 13)
+    self.deck.add_card(new_card)
+    assert len(self.deck.cards) == 5
+
 if __name__ == '__main__':
     unittest.main()
