@@ -22,14 +22,14 @@ class TestCards(unittest.TestCase):
     assert self.player.name == 'John'
     assert self.player.deck == self.deck
 
-  def test_has_lost(self):
-    assert self.player.has_lost() == False
-    self.player.deck.remove_card()
-    self.player.deck.remove_card()
-    assert self.player.has_lost() == False
-    self.player.deck.remove_card()
-    self.player.deck.remove_card()
-    assert self.player.has_lost() == True
+  # def test_has_lost(self):
+  #   assert self.player.has_lost() == False
+  #   self.player.deck.remove_card()
+  #   self.player.deck.remove_card()
+  #   assert self.player.has_lost() == False
+  #   self.player.deck.remove_card()
+  #   self.player.deck.remove_card()
+  #   assert self.player.has_lost() == True
 
 if __name__ == '__main__':
     unittest.main()
