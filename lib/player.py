@@ -3,8 +3,8 @@ class Player:
     self.name = name
     self.deck = deck
 
-  # def has_lost(self):
-  #   if self.deck.cards == []:
-  #     return True
-  #   else:
-  #     return False
+  def has_lost(self):
+    if self.deck.cards == []:
+      return True
+    else:
+      return False
