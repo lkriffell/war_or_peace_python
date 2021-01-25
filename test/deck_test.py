@@ -5,7 +5,7 @@ sys.path.append('.')
 from lib.card import Card
 from lib.deck import Deck
 
-class TestCards(unittest.TestCase):
+class TestDeck(unittest.TestCase):
   def setUp(self):
     self.card_one = Card("Heart", "5", 5)
     self.card_two = Card("Diamond", "Jack",11)

@@ -7,7 +7,7 @@ from lib.deck import Deck
 from lib.player import Player
 
 
-class TestCards(unittest.TestCase):
+class TestPlayer(unittest.TestCase):
   def setUp(self):
     card_one = Card("Heart", "5", 5)
     card_two = Card("Diamond", "Jack",11)
