@@ -1,0 +1,62 @@
+from lib.card import Card
+import random
+
+class CardGenerator:
+  def __init__(self):
+    self.shuffled_deck = [
+      Card('spades', '2', 2),
+      Card('spades', '3', 3),
+      Card('spades', '4', 4),
+      Card('spades', '5', 5),
+      Card('spades', '6', 6),
+      Card('spades', '7', 7),
+      Card('spades', '8', 8),
+      Card('spades', '9', 9),
+      Card('spades', '10', 10),
+      Card('spades', 'Jack', 11),
+      Card('spades', 'Queen', 12),
+      Card('spades', 'King', 13),
+      Card('spades', 'Ace', 14),
+      Card('diamonds', '2', 2),
+      Card('diamonds', '3', 3),
+      Card('diamonds', '4', 4),
+      Card('diamonds', '5', 5),
+      Card('diamonds', '6', 6),
+      Card('diamonds', '7', 7),
+      Card('diamonds', '8', 8),
+      Card('diamonds', '9', 9),
+      Card('diamonds', '10', 10),
+      Card('diamonds', 'Jack', 11),
+      Card('diamonds', 'Queen', 12),
+      Card('diamonds', 'King', 13),
+      Card('diamonds', 'Ace', 14),
+      Card('clubs', '2', 2),
+      Card('clubs', '3', 3),
+      Card('clubs', '4', 4),
+      Card('clubs', '5', 5),
+      Card('clubs', '6', 6),
+      Card('clubs', '7', 7),
+      Card('clubs', '8', 8),
+      Card('clubs', '9', 9),
+      Card('clubs', '10', 10),
+      Card('clubs', 'Jack', 11),
+      Card('clubs', 'Queen', 12),
+      Card('clubs', 'King', 13),
+      Card('clubs', 'Ace', 14),
+      Card('hearts', '2', 2),
+      Card('hearts', '3', 3),
+      Card('hearts', '4', 4),
+      Card('hearts', '5', 5),
+      Card('hearts', '6', 6),
+      Card('hearts', '7', 7),
+      Card('hearts', '8', 8),
+      Card('hearts', '9', 9),
+      Card('hearts', '10', 10),
+      Card('hearts', 'Jack', 11),
+      Card('hearts', 'Queen', 12),
+      Card('hearts', 'King', 13),
+      Card('hearts', 'Ace', 14)
+      ]
+    random.shuffle(self.shuffled_deck)
+    self.deck1 = self.shuffled_deck[:len(self.shuffled_deck)//2]
+    self.deck2 = self.shuffled_deck[len(self.shuffled_deck)//2:]

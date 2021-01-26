@@ -52,12 +52,12 @@ class TestTurn(unittest.TestCase):
   def test_winner_basic(self):
     assert self.turn.turn_type() == 'Basic'
     self.turn.pile_those_cards(self.turn.player1.deck.cards, self.turn.player2.deck.cards)
-    assert self.turn.winner() == self.player2
+    assert self.turn.winner() == self.player1
 
   def test_winner_war(self):
     self.player2.deck.cards.insert(0, Card("Spade", "5", 5))
     assert self.turn.turn_type() == 'War!'
-    self.turn.pile_those_cards(self.turn.player1.deck.cards, self.turn.player2.deck.cards, 2)
+    self.turn.pile_those_cards(self.turn.player1.deck.cards, self.turn.player2.deck.cards)
     assert self.turn.winner() == self.player2
 
   def test_winner_mad(self):
@@ -69,7 +69,7 @@ class TestTurn(unittest.TestCase):
   def test_awards_spoils(self):
     self.turn.pile_those_cards(self.turn.player1.deck.cards, self.turn.player2.deck.cards)
     self.turn.award_spoils()
-    assert len(self.turn.player2.deck.cards) == 5
+    assert len(self.turn.player1.deck.cards) == 5
 
 
 if __name__ == '__main__':

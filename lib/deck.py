@@ -2,12 +2,16 @@ class Deck:
   def __init__(self, cards):
     self.cards = cards
 
-  def rank_of_card_at(self, index):
-    return self.cards[index].rank
+  def value_of_card_at(self, index):
+    if self.cards != [] and index >= len(self.cards) and len(self.cards) > 1:
+      return self.cards[-1].value
+    elif self.cards != []:
+      return self.cards[index].value
+    elif self.cards == []:
+      return 0
+
 
   def high_ranking_cards(self):
-    # result = map(lambda card: card.value > 10, self.cards)
-    # return list(result)
     high_cards = []
     for card in self.cards:
       if card.value > 10:
