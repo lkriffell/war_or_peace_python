@@ -57,7 +57,7 @@ class TestTurn(unittest.TestCase):
   def test_winner_war(self):
     self.player2.deck.cards.insert(0, Card("Spade", "5", 5))
     assert self.turn.turn_type() == 'War!'
-    self.turn.pile_those_cards(self.turn.player1.deck.cards, self.turn.player2.deck.cards, 2)
+    self.turn.pile_those_cards(self.turn.player1.deck.cards, self.turn.player2.deck.cards)
     assert self.turn.winner() == self.player2
 
   def test_winner_mad(self):
