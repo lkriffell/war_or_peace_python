@@ -19,9 +19,9 @@ class TestDeck(unittest.TestCase):
     assert type(self.deck.cards[0]) == Card
 
   def test_value_of_card_at(self):
-    assert self.deck.value_of_card_at(0) == '5'
-    assert self.deck.value_of_card_at(1) == 'Jack'
-    assert self.deck.value_of_card_at(2) == '7'
+    assert self.deck.value_of_card_at(0) == 5
+    assert self.deck.value_of_card_at(1) == 11
+    assert self.deck.value_of_card_at(2) == 7
 
   def test_high_ranking_cards(self):
     assert self.deck.high_ranking_cards() == [self.card_two, self.card_four]
