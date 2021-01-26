@@ -33,8 +33,6 @@ class War:
       while self.player1.has_lost() == False and self.player2.has_lost() == False and self.turn_count < 1000000:
         turn = self.new_turn()
         winner = turn.winner()
-        print(self.player1.has_lost())
-        print(self.player2.has_lost())
         if turn.turn_type() == 'Basic':
           turn.pile_those_cards(self.player1.deck.cards, self.player2.deck.cards)
           turn.award_spoils()
