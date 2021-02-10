@@ -9,7 +9,6 @@ class War:
     self.player2 = ''
     self.turn_count = 0
     self.create_players()
-    self.start()
 
   def create_players(self):
     generator = CardGenerator()
@@ -54,5 +53,3 @@ class War:
         print("And the winner is: %s!"%(winner.name))
     else:
       print('ok dont play...')
-    
-War()
